@@ -359,67 +359,56 @@
         </h2>
 
         <form action="https://api.web3forms.com/submit" method="POST" class="needs-validation" novalidate>
-   <input type="hidden" name="access_key" value="c835dcfb-867d-45f8-b131-39c4090571d4">
 
-            <div class="mb-3">
+    <input type="hidden" name="access_key" value="c835dcfb-867d-45f8-b131-39c4090571d4">
 
-                <label for="name" class="form-label">
-                    Full Name
-                </label>
+    <div class="mb-3">
+        <label for="name" class="form-label">
+            Full Name
+        </label>
+        <input type="text"
+               class="form-control"
+               id="name"
+               name="name"
+               required>
+        <div class="invalid-feedback">
+            Please enter your name.
+        </div>
+    </div>
 
-                <input type="text"
-                       class="form-control"
-                       id="name"
-                       required>
+    <div class="mb-3">
+        <label for="email" class="form-label">
+            Email Address
+        </label>
+        <input type="email"
+               class="form-control"
+               id="email"
+               name="email"
+               required>
+        <div class="invalid-feedback">
+            Please enter a valid email.
+        </div>
+    </div>
 
-                <div class="invalid-feedback">
-                    Please enter your name.
-                </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">
+            Message
+        </label>
+        <textarea class="form-control"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required></textarea>
+        <div class="invalid-feedback">
+            Please enter a message.
+        </div>
+    </div>
 
-            </div>
+    <button type="submit" class="btn btn-success">
+        Send Message
+    </button>
 
-            <div class="mb-3">
-
-                <label for="email" class="form-label">
-                    Email Address
-                </label>
-
-                <input type="email"
-                       class="form-control"
-                       id="email"
-                       required>
-
-                <div class="invalid-feedback">
-                    Please enter a valid email.
-                </div>
-
-            </div>
-
-            <div class="mb-3">
-
-                <label for="message" class="form-label">
-                    Message
-                </label>
-
-                <textarea class="form-control"
-                          id="message"
-                          rows="5"
-                          required></textarea>
-
-                <div class="invalid-feedback">
-                    Please enter a message.
-                </div>
-
-            </div>
-
-            <button type="submit"
-                    class="btn btn-success">
-
-                Send Message
-
-            </button>
-
-        </form>
+</form>
 
     </section>
 
