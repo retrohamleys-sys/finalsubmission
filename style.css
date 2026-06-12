@@ -1,0 +1,328 @@
+/* =========================
+   CSS VARIABLES
+========================= */
+
+:root{
+    --primary-color:#8b0000;
+    --secondary-color:#f4f4f4;
+    --dark-color:#1f1f1f;
+    --light-color:#ffffff;
+    --accent-color:#d4af37;
+}
+
+/* =========================
+   GENERAL STYLES
+========================= */
+
+html{
+    font-size:62.5%;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    font-size:1.6rem;
+    color:var(--dark-color);
+    background-color:var(--secondary-color);
+    margin:0;
+    padding:0;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,
+h2,
+h3{
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    color:var(--primary-color);
+}
+
+p{
+    line-height:1.8;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:3rem;
+    font-size:3rem;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section{
+
+    background-image:url("images/hero.jpg");
+    background-size:cover;
+    background-position:center;
+
+    min-height:80vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:4rem;
+
+    position:relative;
+
+    animation:fadeInHero 2s ease-in-out;
+}
+
+.hero-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background-color:rgba(0,0,0,0.55);
+}
+
+.hero-content{
+
+    position:relative;
+    z-index:2;
+
+    color:white;
+}
+
+.hero-content h1{
+    color:white;
+}
+
+.hero-content p{
+    color:white;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeInHero{
+
+    from{
+        opacity:0;
+        transform:translateX(-3rem);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar-brand{
+    font-size:2.2rem;
+}
+
+.nav-link{
+    font-size:1.6rem;
+}
+
+.nav-link:hover{
+    color:var(--accent-color);
+}
+
+/* =========================
+   CAROUSEL
+========================= */
+
+.carousel{
+    border-radius:1.5rem;
+    overflow:hidden;
+}
+
+.carousel-image{
+
+    height:50rem;
+
+    object-fit:cover;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+#about{
+
+    background-color:var(--light-color);
+
+    padding:4rem;
+
+    border-radius:1.5rem;
+}
+
+/* =========================
+   CARDS SECTION
+========================= */
+
+.card{
+
+    border:none;
+
+    border-radius:1.5rem;
+
+    transition:0.4s;
+}
+
+.card:hover{
+
+    transform:translateY(-1rem);
+}
+
+.card-img-top{
+
+    height:25rem;
+
+    object-fit:cover;
+}
+
+.card-title{
+
+    font-size:2.2rem;
+}
+
+.card-text{
+
+    font-size:1.5rem;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-content{
+
+    border-radius:1.5rem;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+form{
+
+    background-color:var(--light-color);
+
+    padding:4rem;
+
+    border-radius:1.5rem;
+}
+
+.form-control{
+
+    font-size:1.6rem;
+}
+
+.form-label{
+
+    font-weight:600;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+
+    border-radius:5rem;
+
+    font-size:1.6rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-section{
+
+    background-color:var(--dark-color);
+
+    color:white;
+
+    text-align:center;
+
+    padding:4rem;
+
+    margin-top:5rem;
+}
+
+.footer-section h3{
+    color:white;
+}
+
+.footer-section a{
+
+    color:var(--accent-color);
+
+    text-decoration:none;
+}
+
+.footer-section a:hover{
+
+    color:white;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 992px){
+
+    .hero-section{
+
+        min-height:60vh;
+    }
+
+    .hero-content h1{
+
+        font-size:4.5rem;
+    }
+
+    .carousel-image{
+
+        height:35rem;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .hero-content h1{
+
+        font-size:3.8rem;
+    }
+
+    .hero-content p{
+
+        font-size:2rem;
+    }
+
+    .carousel-image{
+
+        height:25rem;
+    }
+
+    .section-title{
+
+        font-size:2.5rem;
+    }
+
+}
